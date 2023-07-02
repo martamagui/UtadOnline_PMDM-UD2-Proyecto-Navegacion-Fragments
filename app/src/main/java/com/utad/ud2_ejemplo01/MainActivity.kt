@@ -2,10 +2,19 @@ package com.utad.ud2_ejemplo01
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.utad.ud2_ejemplo01.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var _binding: ActivityMainBinding
+    private val binding: ActivityMainBinding get() = _binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //Lógica de la activity aquí
+
     }
 }
