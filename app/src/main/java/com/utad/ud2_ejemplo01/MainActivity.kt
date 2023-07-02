@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Lógica de la activity aquí
+        val myInitialFragment = InitialFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(binding.fcvTest.id, myInitialFragment)
+        transaction.commit()
 
     }
 }
