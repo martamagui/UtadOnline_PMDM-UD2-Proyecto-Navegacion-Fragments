@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE
 import com.utad.ud2_ejemplo01.databinding.FragmentInitialBinding
 
 
@@ -23,6 +24,17 @@ class InitialFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //Lógica de los frg aquí :)
+
+        binding.fabInitialNext.setOnClickListener { navigateNext() }
+    }
+
+    private fun navigateNext() {
+        val secondFragment = InitialSecondFragment()
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.setReorderingAllowed(true)
+        transaction.replace(R.id.fcv_test, secondFragment)
+        transaction.setTransition(TRANSIT_FRAGMENT_FADE)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

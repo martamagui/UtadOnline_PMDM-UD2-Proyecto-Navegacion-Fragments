@@ -19,7 +19,7 @@ class InitialSecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding =  FragmentInitialSecondBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentInitialSecondBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
