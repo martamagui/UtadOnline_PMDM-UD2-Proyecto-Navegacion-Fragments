@@ -8,5 +8,17 @@
     <string name="initial_second_title">¿Necesitas orden para alcanzar tus metas?</string>
     <string name="initial_second_image_description">Ilustración de una chica cargando una caja de papeles</string>
 
+    <string name="sign_up_button">Finalizar</string>
+    <string name="sign_up_title">Ya casi está, yujuu!!</string>
+    <string name="sign_up_subtitle">Necesitamos saber cómo dirigirnos a ti</string>
+    <string name="sign_up_name_hint">Dinos tu nombre</string>
+    <string name="sign_up_mail_hint">¿Cuál es tu email?</string>
+    <string name="sign_up_image_description">Ilustración de un chico vestido de cocodrilo</string>
+
+    <string name="welcome_title">Bienvenid@</string>
+    <string name="welcome_image_description">Ilustración tres personas subiendo una cima</string>
+
+
+
 
 </resources>

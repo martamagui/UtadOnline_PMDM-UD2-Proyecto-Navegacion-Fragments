@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5CCF8"
+    tools:context=".SignUpFragment">
+
+    <TextView
+        android:id="@+id/tv_sign_up_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/sign_up_title"
+        android:textAlignment="center"
+        android:textColor="#544D7F"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/sign_up_name_hint"
+        android:inputType="textAutoComplete"
+        app:layout_constraintEnd_toEndOf="@+id/iv_sign_up"
+        app:layout_constraintStart_toStartOf="@+id/iv_sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/iv_sign_up" />
+
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/sign_up_mail_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/et_name"
+        app:layout_constraintStart_toStartOf="@+id/et_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <ImageView
+        android:id="@+id/iv_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/pic_sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_title" />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/sign_up_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_mail"
+        app:layout_constraintStart_toStartOf="@+id/et_mail"
+        app:layout_constraintTop_toBottomOf="@+id/et_mail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
