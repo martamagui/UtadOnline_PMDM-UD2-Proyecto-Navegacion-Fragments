@@ -4,48 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B39DDB"
-    tools:context=".InitialFragment">
-
-    <ImageView
-        android:id="@+id/iv_initial"
-        android:layout_width="0dp"
-        android:layout_height="360dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:contentDescription="@string/initial_image_description"
-        android:src="@drawable/pic_initial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="#A5D6A7"
+    tools:context=".InitialSecondFragment">
 
     <TextView
-        android:id="@+id/tv_initial_title"
+        android:id="@+id/tv_initial_second_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="@string/initial_title"
+        android:text="@string/initial_second_title"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#544D7F"
         android:textSize="42sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/iv_initial"
+        app:layout_constraintBottom_toTopOf="@+id/iv_initial_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_initial_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:contentDescription="@string/initial_button_description"
-        android:src="@drawable/ic_arrow_forward"
+    <ImageView
+        android:id="@+id/iv_initial_second"
+        android:layout_width="0dp"
+        android:layout_height="360dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/initial_second_image_description"
+        android:src="@drawable/pic_initial_second"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_initial" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:text="@string/initial_second_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_initial_second" />
 </androidx.constraintlayout.widget.ConstraintLayout>

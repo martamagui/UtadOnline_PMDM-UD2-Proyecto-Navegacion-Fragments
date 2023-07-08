@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">UD2-Ejemplo01</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="initial_title">¿Se te olvidan las tareas pendientes?</string>
+    <string name="initial_button_description">Siguiente</string>
+    <string name="initial_image_description">Ilustración de una chica con una lista de tareas</string>
+
+    <string name="initial_second_button">Regístrate</string>
+    <string name="initial_second_title">¿Necesitas orden para alcanzar tus metas?</string>
+    <string name="initial_second_image_description">Ilustración de una chica cargando una caja de papeles</string>
+
+
 </resources>
