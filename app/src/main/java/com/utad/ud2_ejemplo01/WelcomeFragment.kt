@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.utad.ud2_ejemplo01.databinding.FragmentWelcomeBinding
 
 
@@ -15,6 +17,8 @@ class WelcomeFragment : Fragment() {
 
     private var name: String? = null
     private var email: String? = null
+
+    private val args: WelcomeFragmentArgs by navArgs()
 
     companion object {
         const val nameKey = "name"
@@ -43,12 +47,16 @@ class WelcomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        /*
+        //Extrer argumentos del bundle
         if (requireArguments().containsKey("name")) {
             name = requireArguments().getString("name")
         }
         if (requireArguments().containsKey("email")) {
             email = requireArguments().getString("email")
-        }
+        }*/
+        email = args.emailValue
+        name = args.nameValue
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

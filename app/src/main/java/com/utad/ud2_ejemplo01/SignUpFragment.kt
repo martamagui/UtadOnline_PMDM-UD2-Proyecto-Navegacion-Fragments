@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN
+import androidx.navigation.fragment.findNavController
 import com.utad.ud2_ejemplo01.databinding.FragmentSignUpBinding
 
 
@@ -43,7 +44,7 @@ class SignUpFragment : Fragment() {
         }
     }
 
-/*    Opción 1
+    /* //Opción1 - Transacciones
     private fun navigateToWelcomeFragment(nameValue: String, emailValue: String) {
         val bundle = Bundle()
         bundle.putString("name", nameValue)
@@ -60,16 +61,25 @@ class SignUpFragment : Fragment() {
         transaction.commit()
     }*/
 
-    //Opción 2
+    /*//Opción 2 - Transacciones
     private fun navigateToWelcomeFragment(nameValue: String, emailValue: String) {
-        val welcomeFragment = WelcomeFragment.newInstance(nameValue, emailValue)
+        val action = SignUpFragmentDirections.actionSignUpFragmentToWelcomeFragment(nameValue, emailValue)
+        findNavController().navigate(action)
+
+        *//*val welcomeFragment = WelcomeFragment.newInstance(nameValue, emailValue)
 
         val transaction = parentFragmentManager.beginTransaction()
         transaction.setReorderingAllowed(true)
         transaction.replace(R.id.fcv_test, welcomeFragment)
         transaction.addToBackStack(null)
         transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
-        transaction.commit()
+        transaction.commit()*//*
+    }  */
+
+    //Opción 3 - NavigationComponet
+    private fun navigateToWelcomeFragment(nameValue: String, emailValue: String) {
+        val action = SignUpFragmentDirections.actionSignUpFragmentToWelcomeFragment(nameValue, emailValue)
+        findNavController().navigate(action)
     }
 
 }

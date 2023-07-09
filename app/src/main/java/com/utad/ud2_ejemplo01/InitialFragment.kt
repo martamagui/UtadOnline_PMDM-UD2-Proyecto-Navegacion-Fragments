@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_FADE
+import androidx.navigation.fragment.findNavController
 import com.utad.ud2_ejemplo01.databinding.FragmentInitialBinding
 
 
@@ -34,6 +35,14 @@ class InitialFragment : Fragment() {
         }
     }
 
+    //Componente de navegación
+    private fun navigateNext() {
+        val action = InitialFragmentDirections.actionInitialFragmentToInitialSecondFragment()
+        findNavController().navigate(action)
+    }
+
+    /*
+    //Transacciones
     private fun navigateNext() {
         val secondFragment = InitialSecondFragment()
         val transaction = parentFragmentManager.beginTransaction()
@@ -42,5 +51,5 @@ class InitialFragment : Fragment() {
         transaction.setTransition(TRANSIT_FRAGMENT_FADE)
         transaction.addToBackStack(null)
         transaction.commit()
-    }
+    }*/
 }

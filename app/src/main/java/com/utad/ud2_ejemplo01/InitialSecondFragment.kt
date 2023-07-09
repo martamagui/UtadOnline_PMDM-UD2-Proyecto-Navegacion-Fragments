@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN
+import androidx.navigation.fragment.findNavController
 import com.utad.ud2_ejemplo01.databinding.FragmentInitialSecondBinding
 
 
@@ -31,6 +32,14 @@ class InitialSecondFragment : Fragment() {
     }
 
     private fun navigateToSignUp() {
+        val action = InitialSecondFragmentDirections.actionInitialSecondFragmentToSignUpFragment()
+        findNavController().navigate(action)
+    }
+
+
+    /*
+    Transacciones entre fragmentos
+    private fun navigateToSignUp() {
         val signUpFragment = SignUpFragment()
         val transaction = parentFragmentManager.beginTransaction()
         transaction.setReorderingAllowed(true)
@@ -38,7 +47,7 @@ class InitialSecondFragment : Fragment() {
         transaction.addToBackStack(null)
         transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
         transaction.commit()
-    }
+    }*/
 
 
 }

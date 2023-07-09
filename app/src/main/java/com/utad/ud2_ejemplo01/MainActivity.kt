@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val myInitialFragment = InitialFragment()
+        /*val myInitialFragment = InitialFragment()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.setReorderingAllowed(true)
         transaction.add(binding.fcvTest.id, myInitialFragment)
-        transaction.commit()
+        transaction.commit()*/
     }
 }
