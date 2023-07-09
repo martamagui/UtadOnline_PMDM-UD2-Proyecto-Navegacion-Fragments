@@ -43,22 +43,22 @@ class SignUpFragment : Fragment() {
         }
     }
 
-//    Opción 1
-//    private fun navigateToWelcomeFragment(nameValue: String, emailValue: String) {
-//        val bundle = Bundle()
-//        bundle.putString("name", nameValue)
-//        bundle.putString("email", emailValue)
-//
-//        val welcomeFragment = WelcomeFragment()
-//        welcomeFragment.arguments = bundle
-//
-//        val transaction = parentFragmentManager.beginTransaction()
-//        transaction.setReorderingAllowed(true)
-//        transaction.replace(R.id.fcv_test, welcomeFragment)
-//        transaction.addToBackStack(null)
-//        transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
-//        transaction.commit()
-//    }
+/*    Opción 1
+    private fun navigateToWelcomeFragment(nameValue: String, emailValue: String) {
+        val bundle = Bundle()
+        bundle.putString("name", nameValue)
+        bundle.putString("email", emailValue)
+
+        val welcomeFragment = WelcomeFragment()
+        welcomeFragment.arguments = bundle
+
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.setReorderingAllowed(true)
+        transaction.replace(R.id.fcv_test, welcomeFragment)
+        transaction.addToBackStack(null)
+        transaction.setTransition(TRANSIT_FRAGMENT_OPEN)
+        transaction.commit()
+    }*/
 
     //Opción 2
     private fun navigateToWelcomeFragment(nameValue: String, emailValue: String) {

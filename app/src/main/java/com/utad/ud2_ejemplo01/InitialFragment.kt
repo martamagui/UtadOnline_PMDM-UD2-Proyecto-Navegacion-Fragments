@@ -25,7 +25,13 @@ class InitialFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fabInitialNext.setOnClickListener { navigateNext() }
+        val bundle = Bundle()
+        bundle.putString("arg", "ESTO ES MI MENSAJE DE RESULTADO")
+        parentFragmentManager.setFragmentResult("resultado", bundle)
+
+        binding.fabInitialNext.setOnClickListener {
+            navigateNext()
+        }
     }
 
     private fun navigateNext() {
