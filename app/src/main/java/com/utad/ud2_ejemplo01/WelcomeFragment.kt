@@ -13,6 +13,9 @@ class WelcomeFragment : Fragment() {
     private lateinit var _binding: FragmentWelcomeBinding
     private val binding: FragmentWelcomeBinding get() = _binding
 
+    private var name: String? = null
+    private var email: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,8 +24,21 @@ class WelcomeFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (requireArguments().containsKey("name")) {
+            name = requireArguments().getString("name")
+        }
+        if (requireArguments().containsKey("email")) {
+            email = requireArguments().getString("email")
+        }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //Lógica de la UI aquí :)
+        binding.tvUserName.text = name
+        binding.tvEmailValue.text = email
+    }
 }
+

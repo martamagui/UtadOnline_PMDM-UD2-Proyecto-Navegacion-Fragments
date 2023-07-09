@@ -14,6 +14,8 @@
     <string name="sign_up_name_hint">Dinos tu nombre</string>
     <string name="sign_up_mail_hint">¿Cuál es tu email?</string>
     <string name="sign_up_image_description">Ilustración de un chico vestido de cocodrilo</string>
+    <string name="sign_up_empty_field_error">Por favor, rellena todos los campos</string>
+    <string name="sign_up_newsletter">Te enviaremos todas nuestras novedades a: </string>
 
     <string name="welcome_title">Bienvenid@</string>
     <string name="welcome_image_description">Ilustración tres personas subiendo una cima</string>

@@ -50,4 +50,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_welcome_title"
         tools:text="Francisco" />
+
+    <TextView
+        android:id="@+id/tv_newsletter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/sign_up_newsletter"
+        android:textAlignment="center"
+        android:textColor="#544D7F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_user_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_email_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/sign_up_newsletter"
+        android:textAlignment="center"
+        android:textColor="#544D7F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_newsletter"
+        app:layout_constraintStart_toStartOf="@+id/tv_newsletter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_newsletter"
+        tools:text="tumail@mail.com" />
 </androidx.constraintlayout.widget.ConstraintLayout>
