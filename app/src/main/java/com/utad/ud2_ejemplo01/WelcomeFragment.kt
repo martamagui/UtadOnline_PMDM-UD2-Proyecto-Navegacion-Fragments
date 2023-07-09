@@ -16,6 +16,23 @@ class WelcomeFragment : Fragment() {
     private var name: String? = null
     private var email: String? = null
 
+    companion object {
+        const val nameKey = "name"
+        const val emailKey = "email"
+
+        @JvmStatic
+        fun newInstance(nameValue: String, emailValue: String): WelcomeFragment {
+            val bundle = Bundle()
+            bundle.putString("name", nameValue)
+            bundle.putString("email", emailValue)
+
+            val welcomeFragment = WelcomeFragment()
+            welcomeFragment.arguments = bundle
+
+            return welcomeFragment
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
